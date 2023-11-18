@@ -2,6 +2,7 @@
 package Controlador;
 //Librerias
 import Vista.*;
+import DAO.daoCliente;
 import Modelo.Cliente;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;

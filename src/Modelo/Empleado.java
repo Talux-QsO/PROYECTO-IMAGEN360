@@ -4,6 +4,7 @@ package Modelo;
 import java.text.DecimalFormat;
 
 public class Empleado {
+    private int empleadoId;
     private String dni;
     private String nombre;
     private String apellido;
@@ -33,5 +34,13 @@ public class Empleado {
         DecimalFormat df = new DecimalFormat("S/ #0.00");
         Object[] fila = {contador,nombre,apellido,cargo,df.format(SueldoEmpleado())};
     return fila;
+    }
+
+    public int getEmpleadoId() {
+        return empleadoId;
+    }
+
+    public void setEmpleadoId(int empleadoId) {
+        this.empleadoId = empleadoId;
     }
 }

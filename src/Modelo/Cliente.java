@@ -2,6 +2,7 @@
 package Modelo;
 
 public class Cliente {
+    private int idCliente ;
     private String nombre;
     private String telefono;
     private String direccion;
@@ -11,6 +12,7 @@ public class Cliente {
     public Cliente(){
         contador++;
     }
+    
 
     public String getNombre() {return nombre;}
     public void setNombre(String nombre) {this.nombre = nombre;}
@@ -25,4 +27,8 @@ public class Cliente {
         Object[] fila = {contador,nombre,telefono,direccion,correo};
     return fila;
     }
+
+    public int getIdCliente() {return idCliente;}
+
+    public void setIdCliente(int idCliente) {this.idCliente = idCliente;}
 }
