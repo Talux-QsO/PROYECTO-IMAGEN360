@@ -5,6 +5,10 @@ import Controlador.*;
 import Modelo.*;
 import Vista.*;
 public class Main {
+    static Vista_Producto producto;
+    static ControladorProducto controladorProducto;
+    static Empleados empleados;
+    static ControladorEmpleados controladorEmpleados;
     static Panel panel;
     static ControladorPanel controladorpanel;
     static Usuario us;
@@ -20,8 +24,10 @@ public class Main {
         controladorpanel = new ControladorPanel(panel);
         clientes = new Clientes();
         controladorClientes = new ControladorClientes(clientes);
-        
-      
+        empleados = new Empleados();
+        controladorEmpleados = new ControladorEmpleados(empleados);
+        producto = new Vista_Producto();
+        controladorProducto = new ControladorProducto(producto);
     }
     
 }

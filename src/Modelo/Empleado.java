@@ -36,11 +36,8 @@ public class Empleado {
     return fila;
     }
 
-    public int getEmpleadoId() {
-        return empleadoId;
-    }
+    public int getEmpleadoId() {return empleadoId;    }
 
-    public void setEmpleadoId(int empleadoId) {
-        this.empleadoId = empleadoId;
+    public void setEmpleadoId(int empleadoId) {this.empleadoId = empleadoId;
     }
 }

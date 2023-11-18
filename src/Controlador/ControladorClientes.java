@@ -2,16 +2,16 @@
 package Controlador;
 //Librerias
 import Vista.*;
-import DAO.daoCliente;
 import Modelo.Cliente;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 public class ControladorClientes implements ActionListener{
     //Atributos
     Clientes vistaClientes;
     DefaultTableModel modelotabla;
-    String[] TituloTabla = {"Id","Nombre","Telefono","Correo","Direccion"};
+    String[] TituloTabla = {"Id","Nombre","Telefono","Direccion","Correo"};
     
     //Constructor
     public ControladorClientes(Clientes vistaClientes){
@@ -21,12 +21,15 @@ public class ControladorClientes implements ActionListener{
         modelotabla = new DefaultTableModel(null,TituloTabla);
         this.vistaClientes.jtblRegistrarClientes.setModel(modelotabla);
         this.vistaClientes.jbtnAtras.addActionListener(this);
+        this.vistaClientes.jbtnActualizar.addActionListener(this);
     }
     void LimpiarEntradas(){
         this.vistaClientes.jtxtNombres.setText("");
-        this.vistaClientes.jtxtTelefono.setText("");  
+        this.vistaClientes.jtxtTelefono.setText(""); 
+         this.vistaClientes.jtxtDireccion.setText("");
         this.vistaClientes.jtxtCorreo.setText("");
-        this.vistaClientes.jtxtDireccion.setText("");
+         this.vistaClientes.jtxtNombres.requestFocus();
+       
     }
 
     @Override
@@ -44,9 +47,26 @@ public class ControladorClientes implements ActionListener{
             Panel panel= new Panel();
             panel.setVisible(true); //para enlazar con el siguiente formulario
             panel.setLocationRelativeTo(null);
+            ControladorPanel controladorPanel = new ControladorPanel(panel);
         this.vistaClientes.dispose();
+        }else if(e.getSource() == vistaClientes.jbtnActualizar){
+                  Actualizar();
+                }
+            
         }
+        
+    private void Actualizar(){
+        int filaSeleccionada = vistaClientes.jtblRegistrarClientes.getSelectedRow();
+        if(filaSeleccionada == -1){
+            JOptionPane.showMessageDialog(null, "Seleccione un cliente para modificar");
+            return;
         }
+        // Obtener los datos de la fila seleccionada
+        String nombre = (String) modelotabla.getValueAt(filaSeleccionada, 1);
+        String telefono = (String) modelotabla.getValueAt(filaSeleccionada, 2);
+        String direccion = (String) modelotabla.getValueAt(filaSeleccionada, 3);
+        String correo = (String) modelotabla.getValueAt(filaSeleccionada, 4);
     }
+}
     
 

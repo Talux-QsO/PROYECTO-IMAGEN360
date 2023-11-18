@@ -28,20 +28,21 @@ public class Empleados extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jtxtDni = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jtxtNombre = new javax.swing.JTextField();
+        jtxtApellido = new javax.swing.JTextField();
+        jcbxCargo = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtblRegistroEmpleados = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jbtnRegistrar = new javax.swing.JButton();
+        jbtnEliminar = new javax.swing.JButton();
+        jbtnActualizar = new javax.swing.JButton();
+        jbtnAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -59,28 +60,28 @@ public class Empleados extends javax.swing.JFrame {
         });
         jPanel1.add(jtxtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 200, 40));
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jtxtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtNombre.setForeground(new java.awt.Color(0, 0, 0));
+        jtxtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jtxtNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 200, 40));
+        jPanel1.add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 200, 40));
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 200, 40));
+        jtxtApellido.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtApellido.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jtxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 200, 40));
 
-        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VENDEDOR", "ASISTENTE" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jcbxCargo.setBackground(new java.awt.Color(255, 255, 255));
+        jcbxCargo.setForeground(new java.awt.Color(0, 0, 0));
+        jcbxCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VENDEDOR", "ASISTENTE" }));
+        jcbxCargo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jcbxCargoActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 200, 40));
+        jPanel1.add(jcbxCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 200, 40));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,9 +103,9 @@ public class Empleados extends javax.swing.JFrame {
         jLabel4.setText("Cargo");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 420, 310));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 420, 310));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtblRegistroEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -115,49 +116,54 @@ public class Empleados extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtblRegistroEmpleados);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 580, 400));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Registro de los empleados ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 580, -1));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuardarTodo.png"))); // NOI18N
-        jButton1.setText("Registrar Empleado");
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 40));
+        jbtnRegistrar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jbtnRegistrar.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuardarTodo.png"))); // NOI18N
+        jbtnRegistrar.setText("Registrar Empleado");
+        jPanel3.add(jbtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 40));
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.png"))); // NOI18N
-        jButton2.setText("Eliminar");
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, 40));
+        jbtnEliminar.setBackground(new java.awt.Color(255, 153, 153));
+        jbtnEliminar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jbtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.png"))); // NOI18N
+        jbtnEliminar.setText("Eliminar");
+        jPanel3.add(jbtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, 40));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/exchange.png"))); // NOI18N
-        jButton3.setText("Actualizar");
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 180, 40));
+        jbtnActualizar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jbtnActualizar.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/exchange.png"))); // NOI18N
+        jbtnActualizar.setText("Actualizar");
+        jPanel3.add(jbtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 180, 40));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 420, 140));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 420, 140));
+
+        jbtnAtras.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jbtnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir_1.png"))); // NOI18N
+        jbtnAtras.setText("Atras");
+        getContentPane().add(jbtnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jcbxCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxCargoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jcbxCargoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtxtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtxtNombreActionPerformed
 
     private void jtxtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDniActionPerformed
         // TODO add your handling code here:
@@ -169,10 +175,6 @@ public class Empleados extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -181,9 +183,14 @@ public class Empleados extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTable1;
-    public javax.swing.JTextField jTextField2;
-    public javax.swing.JTextField jTextField3;
+    public javax.swing.JButton jbtnActualizar;
+    public javax.swing.JButton jbtnAtras;
+    public javax.swing.JButton jbtnEliminar;
+    public javax.swing.JButton jbtnRegistrar;
+    public javax.swing.JComboBox<String> jcbxCargo;
+    public javax.swing.JTable jtblRegistroEmpleados;
+    public javax.swing.JTextField jtxtApellido;
     public javax.swing.JTextField jtxtDni;
+    public javax.swing.JTextField jtxtNombre;
     // End of variables declaration//GEN-END:variables
 }

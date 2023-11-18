@@ -59,7 +59,7 @@ public class Clientes extends javax.swing.JFrame {
 
         jtxtCorreo.setBackground(new java.awt.Color(255, 255, 255));
         jtxtCorreo.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jtxtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, 40));
+        jPanel1.add(jtxtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 230, 40));
 
         jbtnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jbtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuardarTodo.png"))); // NOI18N
@@ -90,20 +90,21 @@ public class Clientes extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Correo");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         jtxtDireccion.setBackground(new java.awt.Color(255, 255, 255));
         jtxtDireccion.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jtxtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 230, 40));
+        jPanel1.add(jtxtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, 40));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Dirección");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 310, 500));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("REGISTRO DE LOS CLIENTES");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 620, 30));
@@ -124,7 +125,7 @@ public class Clientes extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jtblRegistrarClientes);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 620, 460));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 620, 460));
 
         jbtnAtras.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jbtnAtras.setForeground(new java.awt.Color(0, 0, 0));

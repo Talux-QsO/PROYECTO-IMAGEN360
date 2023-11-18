@@ -121,19 +121,11 @@ public class Panel extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnClientesActionPerformed
 
     private void jbtnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnProductosActionPerformed
-        Vista_Producto prod = new Vista_Producto();
-        prod.setVisible(true);
-        prod.setLocationRelativeTo(null);
-        prod.setTitle("REGISTRO DE LOS PRODUCTOS");
-        this.dispose();
+       
     }//GEN-LAST:event_jbtnProductosActionPerformed
 
     private void jbtnNuevaVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNuevaVentaActionPerformed
-        Vista_Venta vent = new Vista_Venta();
-        vent.setVisible(true);
-        vent.setLocationRelativeTo(null);
-        vent.setTitle("NUEVA VENTA");
-        this.dispose();
+      
     }//GEN-LAST:event_jbtnNuevaVentaActionPerformed
 
     /**

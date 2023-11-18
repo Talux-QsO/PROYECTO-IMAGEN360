@@ -26,16 +26,153 @@ public class Vista_Producto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtblRegistroProducto = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jtxtCodigo = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jbtnRegistrar = new javax.swing.JButton();
+        jbtnEliminar = new javax.swing.JButton();
+        jbtnActualizar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jtxtNombre = new javax.swing.JTextField();
+        jtxtDescripcion = new javax.swing.JTextField();
+        jtxtPrecio = new javax.swing.JTextField();
+        jspnStock = new javax.swing.JSpinner();
+        jbtnAtras = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 180, 210));
+        jtblRegistroProducto.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jtblRegistroProducto);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 630, 570));
+
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jtxtCodigo.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtCodigo.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jtxtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 280, 30));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("CODIGO");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("NOMBRE");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jbtnRegistrar.setBackground(new java.awt.Color(102, 102, 255));
+        jbtnRegistrar.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jbtnRegistrar.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuardarTodo.png"))); // NOI18N
+        jbtnRegistrar.setText("Registrar Producto");
+        jPanel2.add(jbtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 280, 30));
+
+        jbtnEliminar.setBackground(new java.awt.Color(255, 102, 102));
+        jbtnEliminar.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jbtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.png"))); // NOI18N
+        jbtnEliminar.setText("Eliminar");
+        jPanel2.add(jbtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, 280, 30));
+
+        jbtnActualizar.setBackground(new java.awt.Color(102, 102, 255));
+        jbtnActualizar.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jbtnActualizar.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizar.png"))); // NOI18N
+        jbtnActualizar.setText("Actualizar");
+        jbtnActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnActualizarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jbtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 280, 30));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/producto.png"))); // NOI18N
+        jLabel1.setText("INFORMACION DEL PRODUCTO");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 360, -1));
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("PRECIO VENTA");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, 20));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("DESCRIPCION");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("STOCK");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, 20));
+
+        jtxtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtNombre.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 280, 30));
+
+        jtxtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtDescripcion.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jtxtDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 280, 30));
+
+        jtxtPrecio.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtPrecio.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jtxtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 280, 30));
+        jPanel2.add(jspnStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 280, 30));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 360, 590));
+
+        jbtnAtras.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jbtnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir_1.png"))); // NOI18N
+        jbtnAtras.setText("Atras");
+        jbtnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbtnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 120, 30));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("REGISTRO DEL PRODUCTO");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 630, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAtrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnAtrasActionPerformed
+
+    private void jbtnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnActualizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnActualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -43,6 +180,24 @@ public class Vista_Producto extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JButton jbtnActualizar;
+    public javax.swing.JButton jbtnAtras;
+    public javax.swing.JButton jbtnEliminar;
+    public javax.swing.JButton jbtnRegistrar;
+    public javax.swing.JSpinner jspnStock;
+    public javax.swing.JTable jtblRegistroProducto;
+    public javax.swing.JTextField jtxtCodigo;
+    public javax.swing.JTextField jtxtDescripcion;
+    public javax.swing.JTextField jtxtNombre;
+    public javax.swing.JTextField jtxtPrecio;
     // End of variables declaration//GEN-END:variables
 }

@@ -43,16 +43,18 @@ public class ControladorPanel implements ActionListener{
     }
      private void abrirEmpleados() {
         Empleados empleados = new Empleados();
+        ControladorEmpleados controladorEmpleados = new ControladorEmpleados(empleados);
         empleados.setVisible(true);
         empleados.setLocationRelativeTo(null);
         empleados.setTitle("REGISTRO DE LOS EMPLEADOS");
         vistapanel.dispose();
     }
      private void abrirProductos() {
-        Vista_Producto productos = new Vista_Producto();
-        productos.setVisible(true);
-        productos.setLocationRelativeTo(null);
-        productos.setTitle("REGISTRO DE LOS PRODUCTOS");
+        Vista_Producto producto = new Vista_Producto();
+        ControladorProducto controladorProducto = new ControladorProducto(producto);
+        producto.setVisible(true);
+        producto.setLocationRelativeTo(null);
+        producto.setTitle("REGISTRO DE LOS PRODUCTOS");
         vistapanel.dispose();
     }
 
