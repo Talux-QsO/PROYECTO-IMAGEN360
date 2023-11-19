@@ -10,9 +10,7 @@ package Vista;
  */
 public class Clientes extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Clientes
-     */
+    
     public Clientes() {
         initComponents();
     }
