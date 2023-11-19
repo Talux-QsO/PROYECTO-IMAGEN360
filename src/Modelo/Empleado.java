@@ -4,6 +4,7 @@ package Modelo;
 import java.text.DecimalFormat;
 
 public class Empleado {
+    private int idEmpleado;
     private String dni;
     private String nombre;
     private String apellido;
@@ -21,6 +22,22 @@ public class Empleado {
     public void setApellido(String apellido) {this.apellido = apellido;}
     public String getCargo() {return cargo;}
     public void setCargo(String cargo) {this.cargo = cargo;}
+
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+
+    public static int getContador() {
+        return contador;
+    }
+
+    public static void setContador(int contador) {
+        Empleado.contador = contador;
+    }
     
     //Metodo para el sueldo
     public double SueldoEmpleado(){
